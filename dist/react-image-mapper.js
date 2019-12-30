@@ -1326,7 +1326,7 @@ var ImageMapper = (function (_Component) {
 				var center = _this5.computeCenter(area);
 				var extendedArea = _extends({}, area, { scaledCoords: scaledCoords, center: center });
 				return _react2["default"].createElement("area", {
-					key: area.id || index,
+					key: area._id || index,
 					shape: area.shape,
 					coords: scaledCoords.join(","),
 					onMouseEnter: _this5.hoverOn.bind(_this5, extendedArea, index),
