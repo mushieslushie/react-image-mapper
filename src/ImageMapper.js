@@ -224,7 +224,7 @@ export default class ImageMapper extends Component {
 					onMouseMove={this.mouseMove.bind(this, extendedArea, index)}
 					onClick={this.click.bind(this, extendedArea, index)}
 					href={area.href}
-				/>
+				>test</area>
 			);
 		});
 	}
