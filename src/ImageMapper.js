@@ -215,6 +215,7 @@ export default class ImageMapper extends Component {
 			const extendedArea = { ...area, scaledCoords, center };
 			return (
 				<area
+					title={area.title}
 					key={area._id || index}
 					shape={area.shape}
 					coords={scaledCoords.join(",")}
