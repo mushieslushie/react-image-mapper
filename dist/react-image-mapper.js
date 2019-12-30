@@ -1325,21 +1325,16 @@ var ImageMapper = (function (_Component) {
 				var scaledCoords = _this5.scaleCoords(area.coords);
 				var center = _this5.computeCenter(area);
 				var extendedArea = _extends({}, area, { scaledCoords: scaledCoords, center: center });
-				return _react2["default"].createElement(
-					"area",
-					{
-						title: area.title,
-						key: area._id || index,
-						shape: area.shape,
-						coords: scaledCoords.join(","),
-						onMouseEnter: _this5.hoverOn.bind(_this5, extendedArea, index),
-						onMouseLeave: _this5.hoverOff.bind(_this5, extendedArea, index),
-						onMouseMove: _this5.mouseMove.bind(_this5, extendedArea, index),
-						onClick: _this5.click.bind(_this5, extendedArea, index),
-						href: area.href
-					},
-					"test"
-				);
+				return _react2["default"].createElement("area", {
+					key: area.id || index,
+					shape: area.shape,
+					coords: scaledCoords.join(","),
+					onMouseEnter: _this5.hoverOn.bind(_this5, extendedArea, index),
+					onMouseLeave: _this5.hoverOff.bind(_this5, extendedArea, index),
+					onMouseMove: _this5.mouseMove.bind(_this5, extendedArea, index),
+					onClick: _this5.click.bind(_this5, extendedArea, index),
+					href: area.href
+				});
 			});
 		}
 	}, {

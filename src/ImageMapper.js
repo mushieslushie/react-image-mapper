@@ -215,8 +215,7 @@ export default class ImageMapper extends Component {
 			const extendedArea = { ...area, scaledCoords, center };
 			return (
 				<area
-					title={area.title}
-					key={area._id || index}
+					key={area.id || index}
 					shape={area.shape}
 					coords={scaledCoords.join(",")}
 					onMouseEnter={this.hoverOn.bind(this, extendedArea, index)}
@@ -224,7 +223,7 @@ export default class ImageMapper extends Component {
 					onMouseMove={this.mouseMove.bind(this, extendedArea, index)}
 					onClick={this.click.bind(this, extendedArea, index)}
 					href={area.href}
-				>test</area>
+				/>
 			);
 		});
 	}
