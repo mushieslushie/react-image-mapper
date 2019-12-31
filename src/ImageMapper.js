@@ -279,6 +279,9 @@ ImageMapper.propTypes = {
 	onMouseEnter: PropTypes.func,
 	onMouseLeave: PropTypes.func,
 
+	//Preselected areas on load
+	selected: PropTypes.string,
+
 	map: PropTypes.shape({
 		areas: PropTypes.arrayOf(
 			PropTypes.shape({

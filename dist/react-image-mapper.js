@@ -1405,6 +1405,9 @@ ImageMapper.propTypes = {
 	onMouseEnter: _propTypes2["default"].func,
 	onMouseLeave: _propTypes2["default"].func,
 
+	//Preselected areas on load
+	selected: _propTypes2["default"].string,
+
 	map: _propTypes2["default"].shape({
 		areas: _propTypes2["default"].arrayOf(_propTypes2["default"].shape({
 			area: _propTypes2["default"].shape({
