@@ -155,7 +155,9 @@ export default class ImageMapper extends Component {
 		  	} else {
 				this["draw" + shape](
 			  	event.target.getAttribute("coords").split(","),
-			  	area.fillColor
+				area.fillColor,
+				area.lineWidth || this.props.lineWidth,
+				area.strokeColor || this.props.strokeColor
 				);
 				currentSelection = previousSelection.concat(index);
 			}
