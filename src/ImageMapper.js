@@ -53,6 +53,7 @@ export default class ImageMapper extends Component {
 	componentDidUpdate() {
 		this.updateCacheMap();
 		this.initCanvas();
+		console.log(this.props.selected);
 	}
 
 	drawrect(coords, fillColor, lineWidth, strokeColor) {

@@ -1133,6 +1133,7 @@ var ImageMapper = (function (_Component) {
 		value: function componentDidUpdate() {
 			this.updateCacheMap();
 			this.initCanvas();
+			console.log(this.props.selected);
 		}
 	}, {
 		key: "drawrect",
