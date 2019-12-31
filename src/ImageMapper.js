@@ -129,6 +129,7 @@ export default class ImageMapper extends Component {
 			);
 		}
 		if (this.props.onMouseEnter) this.props.onMouseEnter(area, index, event);
+		console.log(index);
 	}
 
 	hoverOff(area, index, event) {
