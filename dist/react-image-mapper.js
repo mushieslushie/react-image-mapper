@@ -1216,7 +1216,7 @@ var ImageMapper = (function (_Component) {
 				this["draw" + shape](event.target.getAttribute("coords").split(","), area.fillColor, area.lineWidth || this.props.lineWidth, area.strokeColor || this.props.strokeColor);
 			}
 			if (this.props.onMouseEnter) this.props.onMouseEnter(area, index, event);
-			console.log(index);
+			console.log(area);
 		}
 	}, {
 		key: "hoverOff",
