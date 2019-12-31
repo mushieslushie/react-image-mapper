@@ -142,9 +142,32 @@ export default class ImageMapper extends Component {
 
 	click(area, index, event) {
 		if (this.props.onClick) {
-			event.preventDefault();
-			this.props.onClick(area, index, event);
+		  	event.preventDefault();
+		  	const shape = event.target.getAttribute("shape");
+		  	const previousSelection = this.state.areasClicked;
+		  	let currentSelection = [];
+		  
+		  	this.props.onClick(area, index, event);
+	
+		  	if (previousSelection.includes(index)) {
+				currentSelection = previousSelection.filter(areas => areas !== index);
+				this.removeClickFill(event.target.getAttribute("coords").split(","));
+		  	} else {
+				this["draw" + shape](
+			  	event.target.getAttribute("coords").split(","),
+			  	area.fillColor
+				);
+				currentSelection = previousSelection.concat(index);
+			}
+		  	this.setState({
+				areasClicked: currentSelection
+		  	});
 		}
+	}
+
+	removeClickFill(coords) {
+		let [left, top, right, bot] = coords;
+		this.ctx.clearRect(left, top, right - left, bot - top);
 	}
 
 	imageClick(event) {
